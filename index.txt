@@ -23,7 +23,7 @@ Sacramento, California, USA
 # navbar
 
 About
-Resume
+Lebenslauf
 Portfolio
 Blog
 Contact
@@ -89,7 +89,7 @@ alt = client logo
 
 # resume
 
-Resume
+Lebenslauf
 
 Education
 
