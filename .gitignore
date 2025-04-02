@@ -534,3 +534,5 @@ TSWLatexianTemp*
 *.xhtml
 
 # End of https://www.toptal.com/developers/gitignore/api/pycharm,jetbrains,latex,visualstudiocode,web
+
+cv.pdf
