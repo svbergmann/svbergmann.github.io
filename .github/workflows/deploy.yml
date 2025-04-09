@@ -23,7 +23,7 @@ jobs:
           node-version: latest
 
       - name: Install resumed and theme
-        run: npm install resumed jsonresume-theme-class
+        run: npm install -g resumed jsonresume-theme-class
 
       - name: Build HTML Resume
         run: resumed render resume.json \
