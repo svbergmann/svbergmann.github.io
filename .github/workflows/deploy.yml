@@ -7,7 +7,12 @@ on:
 
 jobs:
   build:
+    permissions:
+      contents: read    # Allows checking out the repository code
+      pages: write      # Allows uploading Pages artifacts
+
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v4
@@ -36,16 +41,17 @@ jobs:
           path: ./public
 
   deploy:
-    runs-on: ubuntu-latest
     environment:
       name: github-pages
       # The URL is automatically determined by the 'deploy-pages' action
       # upon successful deployment.
-
     # Grant necessary permissions
+
     permissions:
       contents: read    # Allows checking out the repository code
       pages: write      # Allows uploading Pages artifacts
+
+    runs-on: ubuntu-latest
 
     # Specify that this job depends on the 'build' job completing successfully
     needs: build
