@@ -27,8 +27,7 @@ jobs:
 
       - name: Build HTML Resume
         run: resumed render resume.json \
-          --output index.html \
-          --theme ./node_modules/jsonresume-theme-class
+          --output index.html
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
