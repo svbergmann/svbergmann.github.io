@@ -26,8 +26,10 @@ jobs:
         run: npm install -g resumed jsonresume-theme-class
 
       - name: Build HTML Resume
-        run: resumed render resume.json \
-          --output index.html
+        run: |
+          resumed render resume.json \
+          --output index.html \
+          --theme ./node_modules/jsonresume-theme-class
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
