@@ -22,9 +22,6 @@ jobs:
         with:
           # Use a Long-Term Support (LTS) version of Node.js for better stability
           node-version: lts/*
-          # Enable caching for npm dependencies
-          # This speeds up subsequent runs by reusing downloaded packages
-          cache: 'npm'
 
       - name: Install resumed and theme globally
         run: npm install -g resumed jsonresume-theme-class
