@@ -1,5 +1,14 @@
 name: Build and Deploy Resume
-on: push
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+# Grant necessary permissions for the jobs
+permissions:
+  contents: read    # Allows checking out the repository code
+  pages: write      # Allows uploading Pages artifacts
 
 jobs:
   build:
@@ -8,38 +17,44 @@ jobs:
       - name: Checkout 🛎️
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: Setup Node.js environment
         uses: actions/setup-node@v4
         with:
+          # Use a Long-Term Support (LTS) version of Node.js for better stability
           node-version: lts/*
+          # Enable caching for npm dependencies
+          # This speeds up subsequent runs by reusing downloaded packages
+          cache: 'npm'
 
-      - name: Install resumed and theme
+      - name: Install resumed and theme globally
         run: npm install -g resumed jsonresume-theme-class
 
       - name: Create output directory
         run: mkdir ./public
 
-      - name: Build HTML Resume
+      - name: Build HTML resume from the JSON source
         run: |
           resumed render resume.json \
-          --output ./public/index.html \
-          --theme jsonresume-theme-class
+            --output ./public/index.html \
+            --theme jsonresume-theme-class
 
-      - name: Upload static files as artifact
-        id: deployment
+      - name: Upload the build output as a GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
 
   deploy:
+    runs-on: ubuntu-latest
     environment:
       name: github-pages
-    permissions:
-      id-token: write
-      pages: write
-    runs-on: ubuntu-latest
+      # The URL is automatically determined by the 'deploy-pages' action
+      # upon successful deployment.
+
+    # Specify that this job depends on the 'build' job completing successfully
     needs: build
     steps:
-      - name: Deploy to GitHub Pages
+      # This action automatically downloads the 'github-pages' artifact
+      # uploaded by the 'build' job and handles the deployment.
+      - name: Deploy the artifact to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
