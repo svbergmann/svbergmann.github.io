@@ -23,7 +23,7 @@ jobs:
           node-version: latest
 
       - name: Install resume-cli and theme
-        run: npm install resume-cli
+        run: npm install -g resume-cli
 
       - name: Install jsonresume-theme
         run: npm install jsonresume-theme-class
