@@ -20,16 +20,15 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20' # Use a current LTS version
+          node-version: latest
 
       - name: Install resume-cli and theme
-        # Installs resume-cli globally and the specific theme locally
-        run: |
-          npm install -g resume-cli
-          npm install jsonresume-theme-class
+        run: npm install -g resume-cli
+
+      - name: Install jsonresume-theme
+        run: npm install jsonresume-theme-class
 
       - name: Build HTML Resume
-        # Uses the locally installed theme
         run: resume export index.html --theme node_modules/jsonresume-theme-class --resume resume.json
 
       - name: Setup Pages
