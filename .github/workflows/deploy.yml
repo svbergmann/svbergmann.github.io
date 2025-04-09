@@ -22,14 +22,13 @@ jobs:
         with:
           node-version: latest
 
-      - name: Install resume-cli and theme
-        run: npm install -g resume-cli
-
-      - name: Install jsonresume-theme
-        run: npm install jsonresume-theme-class
+      - name: Install resumed and theme
+        run: npm install resumed jsonresume-theme-class
 
       - name: Build HTML Resume
-        run: resume export index.html --theme node_modules/jsonresume-theme-class --resume resume.json
+        run: resumed render resume.json \
+          --output index.html \
+          --theme jsonresume-theme-class
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
