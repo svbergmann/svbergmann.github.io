@@ -120,54 +120,51 @@
       "name": "Report M.Sc. - FH Aachen",
       "date": "2024-07-03",
       "issuer": "FH Aachen University of Applied Sciences",
-      "url": "include/certificates/Masterzeugnis_compressed.pdf"
+      "url": "https://github.com/svbergmann/svbergmann.github.io/blob/master/include/certificates/Masterzeugnis_compressed.pdf"
     },
     {
       "name": "Certificate M.Sc. - FH Aachen",
       "date": "2024-07-03",
       "issuer": "FH Aachen University of Applied Sciences",
-      "url": "include/certificates/Masterurkunde_compressed.pdf"
+      "url": "https://github.com/svbergmann/svbergmann.github.io/blob/master/include/certificates/Masterurkunde_compressed.pdf"
     },
     {
       "name": "Report B.Sc. - FH Aachen",
       "date": "2022-08-25",
       "issuer": "FH Aachen University of Applied Sciences",
-      "url": "include/certificates/Bachelorzeugnis_compressed.pdf"
+      "url": "https://github.com/svbergmann/svbergmann.github.io/blob/master/include/certificates/Bachelorzeugnis_compressed.pdf"
     },
     {
       "name": "Certificate B.Sc. - FH Aachen",
       "date": "2022-08-25",
       "issuer": "FH Aachen University of Applied Sciences",
-      "url": "include/certificates/Bachelorurkunde_compressed.pdf"
+      "url": "https://github.com/svbergmann/svbergmann.github.io/blob/master/include/certificates/Bachelorurkunde_compressed.pdf"
     },
     {
       "name": "Diploma M.Sc. - University of Wisconsin-Milwaukee",
       "date": "2024-05-18",
       "issuer": "University of Wisconsin-Milwaukee",
-      "url": "include/certificates/UWM_Diploma_page_1_compressed.pdf"
+      "url": "https://github.com/svbergmann/svbergmann.github.io/blob/master/include/certificates/UWM_Diploma_page_1_compressed.pdf"
     },
      {
       "name": "Transcript M.Sc. - University of Wisconsin-Milwaukee",
       "issuer": "University of Wisconsin-Milwaukee",
-      "url": "/certificates/UWM_Transcript.pdf"
+      "url": "/https://github.com/svbergmann/svbergmann.github.io/blob/master/include/certificates/UWM_Transcript.pdf"
     },
     {
       "name": "Examination Certificate Mathematical and Technical Software Developer",
-      "date": "",
       "issuer": "IHK",
-      "url": "/certificates/IHK_Pruefungszeugnis_compressed.pdf"
+      "url": "/https://github.com/svbergmann/svbergmann.github.io/blob/master/include/certificates/IHK_Pruefungszeugnis_compressed.pdf"
     },
      {
       "name": "Certificate of Training Mathematical and Technical Software Developer",
-      "date": "",
       "issuer": "CAE GmbH",
-      "url": "/certificates/Ausbildungszeugnis_CAE.pdf"
+      "url": "/https://github.com/svbergmann/svbergmann.github.io/blob/master/include/certificates/Ausbildungszeugnis_CAE.pdf"
     },
     {
       "name": "Certificate of Employment Mathematical and Technical Software Developer",
-      "date": "",
       "issuer": "CAE GmbH",
-      "url": "/certificates/Arbeitszeugnis_CAE.pdf"
+      "url": "/https://github.com/svbergmann/svbergmann.github.io/blob/master/include/certificates/Arbeitszeugnis_CAE.pdf"
     }
   ],
   "skills": [
