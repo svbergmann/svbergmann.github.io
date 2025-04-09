@@ -1,16 +1,9 @@
 name: Build and Deploy Resume
 
-on:
-  push:
-    branches: [ main ]
-  workflow_dispatch:
+on: push
 
 jobs:
   build:
-    permissions:
-      contents: read    # Allows checking out the repository code
-      pages: write      # Allows uploading Pages artifacts
-
     runs-on: ubuntu-latest
 
     steps:
@@ -45,11 +38,11 @@ jobs:
       name: github-pages
       # The URL is automatically determined by the 'deploy-pages' action
       # upon successful deployment.
-    # Grant necessary permissions
 
+    # Grant necessary permissions
     permissions:
-      contents: read    # Allows checking out the repository code
-      pages: write      # Allows uploading Pages artifacts
+      id-token: write
+      pages: write
 
     runs-on: ubuntu-latest
 
