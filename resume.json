@@ -1,4 +1,5 @@
 {
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
   "basics": {
     "name": "Sven Bergmann",
     "label": "Software Engineer",
@@ -57,14 +58,14 @@
       "endDate": "2022-08",
       "summary": ""
     },
-     {
+    {
       "name": "FH Aachen University of Applied Sciences",
       "position": "Academic Assistant",
       "startDate": "2023-05",
       "endDate": "2023-07",
       "summary": ""
     },
-     {
+    {
       "name": "Dekanat für Maschinenwesen der RWTH Aachen University",
       "position": "Student Assistant",
       "startDate": "2017-04",
@@ -91,7 +92,7 @@
       "startDate": "2023-08",
       "endDate": "2024-05",
       "score": "4.0 GPA",
-       "courses": [
+      "courses": [
         "Thesis: Analytic approximation of higher order moments in terms of lower order moments"
       ]
     },
@@ -115,7 +116,7 @@
       "score": "Satisfactory"
     }
   ],
-   "certificates": [
+  "certificates": [
     {
       "name": "Report M.Sc. - FH Aachen",
       "date": "2024-07-03",
@@ -146,7 +147,7 @@
       "issuer": "University of Wisconsin-Milwaukee",
       "url": "https://github.com/svbergmann/svbergmann.github.io/blob/master/include/certificates/UWM_Diploma_page_1_compressed.pdf"
     },
-     {
+    {
       "name": "Transcript M.Sc. - University of Wisconsin-Milwaukee",
       "issuer": "University of Wisconsin-Milwaukee",
       "url": "https://github.com/svbergmann/svbergmann.github.io/blob/master/include/certificates/UWM_Transcript.pdf"
@@ -156,7 +157,7 @@
       "issuer": "IHK",
       "url": "https://github.com/svbergmann/svbergmann.github.io/blob/master/include/certificates/IHK_Pruefungszeugnis_compressed.pdf"
     },
-     {
+    {
       "name": "Certificate of Training Mathematical and Technical Software Developer",
       "issuer": "CAE GmbH",
       "url": "https://github.com/svbergmann/svbergmann.github.io/blob/master/include/certificates/Ausbildungszeugnis_CAE.pdf"
@@ -180,7 +181,7 @@
         "Maple"
       ]
     },
-     {
+    {
       "name": "Tools & Technologies",
       "level": "",
       "keywords": [
@@ -209,11 +210,11 @@
       "language": "Spanish",
       "fluency": "B1"
     },
-     {
+    {
       "language": "French",
       "fluency": "B1"
     },
-      {
+    {
       "language": "Dutch",
       "fluency": "A1"
     }
@@ -228,10 +229,10 @@
         "Basketball (Player and Coach since 2015)"
       ]
     },
-     {
+    {
       "name": "Programming",
       "keywords": [
-         "Personal Projects (see GitHub)"
+        "Personal Projects (see GitHub)"
       ]
     }
   ]
