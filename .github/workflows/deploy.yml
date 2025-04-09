@@ -11,32 +11,29 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: latest
+          node-version: lts/*
 
       - name: Install resumed and theme
         run: npm install -g resumed jsonresume-theme-class
 
+      - name: Create output directory
+        run: mkdir ./public
+
       - name: Build HTML Resume
         run: |
           resumed render resume.json \
-          --output index.html \
+          --output ./public/index.html \
           --theme jsonresume-theme-class
 
       - name: Upload static files as artifact
         id: deployment
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./index.html
+          path: ./public
 
   deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-
     runs-on: ubuntu-latest
-
     needs: build
-
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
