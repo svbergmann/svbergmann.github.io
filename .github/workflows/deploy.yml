@@ -32,6 +32,8 @@ jobs:
           path: ./public
 
   deploy:
+    environment:
+      name: github-pages
     permissions:
       id-token: write
       pages: write
