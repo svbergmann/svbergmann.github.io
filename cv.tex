@@ -1,0 +1,79 @@
+\documentclass{moderncv}
+
+% Set theme to classic and blue headings
+\moderncvtheme[blue]{classic}
+
+% Rescale
+\usepackage[scale=0.8]{geometry}
+\recomputelengths
+
+% Required packages for the translation logic
+\usepackage{ifthen}
+\usepackage{xstring}
+
+% Define \cvlanguage (will be overridden by command line in GitHub Action)
+% Set a default for local compilation if needed
+\newcommand{\cvlang}{EN}
+
+% --- LOAD TRANSLATIONS ---
+% Input the file that defines commands based on \cvlanguage
+\input{include/translations}
+
+\IfStrEqCase{\cvlang}{%
+    {DE}{\usepackage[ngerman]{babel}}%
+    {EN}{\usepackage[english]{babel}}%
+}
+
+% ---
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+\pdfminorversion=7
+
+% For pdf input
+\usepackage{pdfpages}
+
+% For \enquote{} command
+\usepackage{csquotes}
+
+\input{include/translations}
+
+\name{Sven}{Bergmann}
+\title{\titlecv}
+\born{20.09.1995}
+\address{Morillenhang 59}{52074 Aachen}{\germany}
+\phone[mobile]{0049 177 7321 896}
+\email{sbergmann1995@gmail.com}
+\social[linkedin]{svbergmann}
+\social[github]{svbergmann}
+\photo[80pt][0.9pt]{include/images/Bewerbungsfoto_compressed.jpg}
+%
+\begin{document}
+%
+    \maketitle
+%
+    \setlength{\hintscolumnwidth}{0.2\textwidth}
+    \setlength{\maincolumnwidth}{0.78\textwidth}
+%
+    \input{include/career}
+%
+    \input{include/education}
+%
+    \input{include/internships}
+%
+    \input{include/sidejobs}
+%
+    \input{include/languages}
+%
+    \input{include/hobbies}
+%
+    \pagebreak
+%
+    \input{include/skills}
+%
+    \vfill
+%
+    \input{include/appendix}
+%
+\end{document}

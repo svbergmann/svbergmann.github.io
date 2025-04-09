@@ -1,0 +1,243 @@
+{
+  "basics": {
+    "name": "Sven Bergmann",
+    "label": "Software Engineer",
+    "email": "sbergmann1995@gmail.com",
+    "phone": "0049 177 7321 896",
+    "url": "https://svbergmann.github.io",
+    "location": {
+      "address": "Morillenhang 59",
+      "postalCode": "52074",
+      "city": "Aachen",
+      "countryCode": "DE",
+      "region": "North Rhine-Westphalia"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "svbergmann",
+        "url": "https://linkedin.com/in/svbergmann"
+      },
+      {
+        "network": "GitHub",
+        "username": "svbergmann",
+        "url": "https://github.com/svbergmann"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "achelos",
+      "location": "Vattmannstraße 1, 33100 Paderborn, Germany",
+      "position": "Software Engineer",
+      "startDate": "2024-08",
+      "endDate": "present",
+      "summary": ""
+    },
+    {
+      "name": "University of Wisconsin-Milwaukee",
+      "location": "Milwaukee, WI 53211, USA",
+      "position": "Teaching Assistant",
+      "startDate": "2023-08",
+      "endDate": "2024-05",
+      "summary": ""
+    },
+    {
+      "name": "CAE GmbH",
+      "location": "Steinfurt 11, 52222 Stolberg, Germany",
+      "position": "Software developer",
+      "startDate": "2022-09",
+      "endDate": "2023-07",
+      "summary": ""
+    },
+    {
+      "name": "CAE GmbH",
+      "location": "Steinfurt 11, 52222 Stolberg, Germany",
+      "position": "Trainee Mathematical and Technical Software Developer",
+      "startDate": "2019-09",
+      "endDate": "2022-08",
+      "summary": ""
+    },
+     {
+      "name": "FH Aachen University of Applied Sciences",
+      "position": "Academic Assistant",
+      "startDate": "2023-05",
+      "endDate": "2023-07",
+      "summary": ""
+    },
+     {
+      "name": "Dekanat für Maschinenwesen der RWTH Aachen University",
+      "position": "Student Assistant",
+      "startDate": "2017-04",
+      "endDate": "2019-08",
+      "summary": ""
+    }
+  ],
+  "education": [
+    {
+      "institution": "FH Aachen University of Applied Sciences, Jülich, Germany",
+      "area": "Applied Mathematics and Informatics",
+      "studyType": "M.Sc.",
+      "startDate": "2022-10",
+      "endDate": "2024-07",
+      "score": "1.4",
+      "courses": [
+        "Thesis: Analytic approximation of higher order moments in terms of lower order moments"
+      ]
+    },
+    {
+      "institution": "University of Wisconsin-Milwaukee, Milwaukee, WI, USA",
+      "area": "Mathematics",
+      "studyType": "M.Sc.",
+      "startDate": "2023-08",
+      "endDate": "2024-05",
+      "score": "4.0 GPA",
+       "courses": [
+        "Thesis: Analytic approximation of higher order moments in terms of lower order moments"
+      ]
+    },
+    {
+      "institution": "FH Aachen University of Applied Sciences, Jülich, Germany",
+      "area": "Applied Mathematics and Informatics",
+      "studyType": "B.Sc.",
+      "startDate": "2019-09",
+      "endDate": "2022-08",
+      "score": "2.1",
+      "courses": [
+        "Thesis: Konzeption eines webbasierten Datenservices für die Einbindung in eine Flugsimulationsumgebung unter Berücksichtigung geltender Sicherheitsrichtlinien und -risiken"
+      ]
+    },
+    {
+      "institution": "CAE GmbH, Stolberg, Germany",
+      "area": "Mathematical and Technical Software Developer",
+      "studyType": "Vocational Training (IHK Examination)",
+      "startDate": "2019-09",
+      "endDate": "2022-08",
+      "score": "Satisfactory"
+    }
+    // Add Abitur, omitted degrees if desired
+  ],
+   "certificates": [
+    {
+      "name": "Report M.Sc. - FH Aachen",
+      "date": "2024-07-03",
+      "issuer": "FH Aachen University of Applied Sciences",
+      "url": "include/certificates/Masterzeugnis_compressed.pdf"
+    },
+    {
+      "name": "Certificate M.Sc. - FH Aachen",
+      "date": "2024-07-03",
+      "issuer": "FH Aachen University of Applied Sciences",
+      "url": "include/certificates/Masterurkunde_compressed.pdf"
+    },
+    {
+      "name": "Report B.Sc. - FH Aachen",
+      "date": "2022-08-25",
+      "issuer": "FH Aachen University of Applied Sciences",
+      "url": "include/certificates/Bachelorzeugnis_compressed.pdf"
+    },
+    {
+      "name": "Certificate B.Sc. - FH Aachen",
+      "date": "2022-08-25",
+      "issuer": "FH Aachen University of Applied Sciences",
+      "url": "include/certificates/Bachelorurkunde_compressed.pdf"
+    },
+    {
+      "name": "Diploma M.Sc. - University of Wisconsin-Milwaukee",
+      "date": "2024-05-18",
+      "issuer": "University of Wisconsin-Milwaukee",
+      "url": "include/certificates/UWM_Diploma_page_1_compressed.pdf"
+    },
+     {
+      "name": "Transcript M.Sc. - University of Wisconsin-Milwaukee",
+      "issuer": "University of Wisconsin-Milwaukee",
+      "url": "/certificates/UWM_Transcript.pdf"
+    },
+    {
+      "name": "Examination Certificate Mathematical and Technical Software Developer",
+      "date": "",
+      "issuer": "IHK",
+      "url": "/certificates/IHK_Pruefungszeugnis_compressed.pdf"
+    },
+     {
+      "name": "Certificate of Training Mathematical and Technical Software Developer",
+      "date": "",
+      "issuer": "CAE GmbH",
+      "url": "/certificates/Ausbildungszeugnis_CAE.pdf"
+    },
+    {
+      "name": "Certificate of Employment Mathematical and Technical Software Developer",
+      "date": "",
+      "issuer": "CAE GmbH",
+      "url": "/certificates/Arbeitszeugnis_CAE.pdf"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Programming Languages",
+      "level": "",
+      "keywords": [
+        "Java",
+        "Python",
+        "C#",
+        "R",
+        "LaTeX",
+        "Maple"
+      ]
+    },
+     {
+      "name": "Tools & Technologies",
+      "level": "",
+      "keywords": [
+        "Git",
+        "GitHub"
+      ]
+    },
+    {
+      "name": "Methodologies",
+      "level": "",
+      "keywords": [
+        "SCRUM"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "German",
+      "fluency": "Native Speaker"
+    },
+    {
+      "language": "English",
+      "fluency": "C1/C2"
+    },
+    {
+      "language": "Spanish",
+      "fluency": "B1"
+    },
+     {
+      "language": "French",
+      "fluency": "B1"
+    },
+      {
+      "language": "Dutch",
+      "fluency": "A1"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Sports",
+      "keywords": [
+        "Swimming (7 Years)",
+        "Dancing (Latin-American and Ballroom, 9 Years)",
+        "Savate (1 Year)",
+        "Basketball (Player and Coach since 2015)"
+      ]
+    },
+     {
+      "name": "Programming",
+      "keywords": [
+         "Personal Projects (see GitHub)"
+      ]
+    }
+  ]
+}
