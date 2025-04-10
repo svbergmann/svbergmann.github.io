@@ -24,7 +24,7 @@ jobs:
       - name: Compile German LaTeX document (DE) as Lebenslauf_Sven_Bergmann.pdf
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: \def\cvlang{DE}\input{cv.tex}
+          root_file: '\def\cvlang{DE} \input{cv.tex}'
 
       # --- Compile English Version with specific output name ---
       - name: Compile English LaTeX document (EN) as Curriculum_Vitae_Sven_Bergmann.pdf
