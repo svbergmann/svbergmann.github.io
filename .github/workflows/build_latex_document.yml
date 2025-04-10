@@ -27,8 +27,8 @@ jobs:
           root_file: cv.tex
           args: >
             -pdf
-            -pdflatex='\def\cvlang{DE}\input{cv.tex}'
             -jobname=Lebenslauf_Sven_Bergmann
+            -pdflatex="'\def\cvlang{DE}\input{cv.tex}'"
 
       # --- Compile English Version with specific output name ---
       - name: Compile English LaTeX document (EN) as Curriculum_Vitae_Sven_Bergmann.pdf
@@ -37,8 +37,8 @@ jobs:
           root_file: cv.tex
           args: > 
             -pdf 
-            -pdflatex='\def\cvlang{EN}\input{cv.tex}'
             -jobname=Curriculum_Vitae_Sven_Bergmann
+            -pdflatex="'\def\cvlang{EN}\input{cv.tex}'"
 
       - name: Upload PDF artifacts
         uses: actions/upload-artifact@v4
