@@ -7,13 +7,23 @@
 \usepackage[scale=0.8]{geometry}
 \recomputelengths
 
+% --- Language Definition ---
+% Check for environment variable CV_LANG, default to DE if not set or empty
+% Requires -shell-escape flag during compilation
+\usepackage{pdftexcmds} % Provides \pdf@strcmp, needed by ifthen with \pdf@getenv
+\makeatletter
+\edef\cvlangenvariable{\pdf@getenv{CV_LANG}} % Read environment variable CV_LANG
+\if\cvlangenvariable\empty
+    \newcommand{\cvlang}{DE} % Default language
+\else
+    \newcommand{\cvlang}{\cvlangenvariable} % Use language from environment variable
+\fi
+\makeatother
+% --- End Language Definition ---
+
 % Required packages for the translation logic
 \usepackage{ifthen}
 \usepackage{xstring}
-
-% Define \cvlang (will be overridden by command line in GitHub Action)
-% Set a default for local compilation if needed
-\newcommand{\cvlang}{DE}
 
 % --- LOAD TRANSLATIONS ---
 % Input the file that defines commands based on \cvlanguage
