@@ -11,10 +11,6 @@
 \usepackage{ifthen}
 \usepackage{xstring}
 
-% Define \cvlang (will be overridden by command line in GitHub Action)
-% Set a default for local compilation if needed
-\newcommand{\cvlang}{DE}
-
 % --- LOAD TRANSLATIONS ---
 % Input the file that defines commands based on \cvlanguage
 \input{include/translations}
@@ -22,7 +18,7 @@
 \IfStrEqCase{\cvlang}{%
     {DE}{\usepackage[ngerman]{babel}}%
     {EN}{\usepackage[english]{babel}}%
-}
+}[\newcommand{\cvlang}{DE}]
 
 % ---
 

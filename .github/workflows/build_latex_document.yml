@@ -26,8 +26,7 @@ jobs:
         with:
           root_file: cv.tex
           args: >
-            -pdf
-            -latexoption="\\def\\cvlang{DE}"
+            '\def\cvlang{DE}\input{cv.tex}'
             -jobname=Lebenslauf_Sven_Bergmann
 
       # --- Compile English Version with specific output name ---
@@ -36,8 +35,7 @@ jobs:
         with:
           root_file: cv.tex
           args: > 
-            -pdf
-            -latexoption="\\def\\cvlang{EN}"
+            '\def\cvlang{EN}\input{cv.tex}'
             -jobname=Curriculum_Vitae_Sven_Bergmann
 
       - name: Upload PDF artifacts
