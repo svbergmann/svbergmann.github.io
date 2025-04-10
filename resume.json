@@ -1,10 +1,12 @@
 {
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
   "basics": {
     "metadata": {
       "theme": "kendall"
     },
     "name": "Sven Bergmann",
     "label": "Software Engineer",
+    "image": "/include/images/Bewerbungsfoto.jpg",
     "email": "sbergmann1995@gmail.com",
     "phone": "0049 177 7321 896",
     "picture": "https://github.com/svbergmann/svbergmann.github.io/blob/master/include/images/Bewerbungsfoto_compressed.jpg",
