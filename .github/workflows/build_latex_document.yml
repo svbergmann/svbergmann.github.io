@@ -26,6 +26,7 @@ jobs:
         with:
           root_file: cv.tex
           args: >
+            -pdf
             '\def\cvlang{DE}\input{cv.tex}'
             -jobname=Lebenslauf_Sven_Bergmann
 
@@ -35,6 +36,7 @@ jobs:
         with:
           root_file: cv.tex
           args: > 
+            -pdf 
             '\def\cvlang{EN}\input{cv.tex}'
             -jobname=Curriculum_Vitae_Sven_Bergmann
 
