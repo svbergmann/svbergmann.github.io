@@ -1,9 +1,13 @@
 {
   "basics": {
+    "metadata": {
+      "theme": "kendall"
+    },
     "name": "Sven Bergmann",
     "label": "Software Engineer",
     "email": "sbergmann1995@gmail.com",
     "phone": "0049 177 7321 896",
+    "picture": "https://github.com/svbergmann/svbergmann.github.io/blob/master/include/images/Bewerbungsfoto_compressed.jpg",
     "url": "https://svbergmann.github.io",
     "location": {
       "address": "Morillenhang 59",
@@ -57,14 +61,14 @@
       "endDate": "2022-08",
       "summary": ""
     },
-     {
+    {
       "name": "FH Aachen University of Applied Sciences",
       "position": "Academic Assistant",
       "startDate": "2023-05",
       "endDate": "2023-07",
       "summary": ""
     },
-     {
+    {
       "name": "Dekanat für Maschinenwesen der RWTH Aachen University",
       "position": "Student Assistant",
       "startDate": "2017-04",
@@ -75,6 +79,7 @@
   "education": [
     {
       "institution": "FH Aachen University of Applied Sciences, Jülich, Germany",
+      "url": "https://www.fh-aachen.de",
       "area": "Applied Mathematics and Informatics",
       "studyType": "M.Sc.",
       "startDate": "2022-10",
@@ -86,17 +91,19 @@
     },
     {
       "institution": "University of Wisconsin-Milwaukee, Milwaukee, WI, USA",
+      "url": "http://www4.uwm.edu/",
       "area": "Mathematics",
       "studyType": "M.Sc.",
       "startDate": "2023-08",
       "endDate": "2024-05",
       "score": "4.0 GPA",
-       "courses": [
+      "courses": [
         "Thesis: Analytic approximation of higher order moments in terms of lower order moments"
       ]
     },
     {
       "institution": "FH Aachen University of Applied Sciences, Jülich, Germany",
+      "url": "https://www.fh-aachen.de",
       "area": "Applied Mathematics and Informatics",
       "studyType": "B.Sc.",
       "startDate": "2019-09",
@@ -108,14 +115,24 @@
     },
     {
       "institution": "CAE GmbH, Stolberg, Germany",
+      "url": "https://de.cae.com/",
       "area": "Mathematical and Technical Software Developer",
       "studyType": "Vocational Training (IHK Examination)",
       "startDate": "2019-09",
       "endDate": "2022-08",
       "score": "Satisfactory"
+    },
+    {
+      "institution": "Kronberg Gymnasium, Aschaffenburg, Germany",
+      "url": "https://kronberg-gymnasium.de",
+      "area": "High School Diploma (Abitur)",
+      "studyType": "High School",
+      "startDate": "2005-09",
+      "endDate": "2015-07",
+      "score": "2.8"
     }
   ],
-   "certificates": [
+  "certificates": [
     {
       "name": "Report M.Sc. - FH Aachen",
       "date": "2024-07-03",
@@ -146,7 +163,7 @@
       "issuer": "University of Wisconsin-Milwaukee",
       "url": "https://github.com/svbergmann/svbergmann.github.io/blob/master/include/certificates/UWM_Diploma_page_1_compressed.pdf"
     },
-     {
+    {
       "name": "Transcript M.Sc. - University of Wisconsin-Milwaukee",
       "issuer": "University of Wisconsin-Milwaukee",
       "url": "https://github.com/svbergmann/svbergmann.github.io/blob/master/include/certificates/UWM_Transcript.pdf"
@@ -156,7 +173,7 @@
       "issuer": "IHK",
       "url": "https://github.com/svbergmann/svbergmann.github.io/blob/master/include/certificates/IHK_Pruefungszeugnis_compressed.pdf"
     },
-     {
+    {
       "name": "Certificate of Training Mathematical and Technical Software Developer",
       "issuer": "CAE GmbH",
       "url": "https://github.com/svbergmann/svbergmann.github.io/blob/master/include/certificates/Ausbildungszeugnis_CAE.pdf"
@@ -180,7 +197,7 @@
         "Maple"
       ]
     },
-     {
+    {
       "name": "Tools & Technologies",
       "level": "",
       "keywords": [
@@ -209,11 +226,11 @@
       "language": "Spanish",
       "fluency": "B1"
     },
-     {
+    {
       "language": "French",
       "fluency": "B1"
     },
-      {
+    {
       "language": "Dutch",
       "fluency": "A1"
     }
@@ -228,10 +245,10 @@
         "Basketball (Player and Coach since 2015)"
       ]
     },
-     {
+    {
       "name": "Programming",
       "keywords": [
-         "Personal Projects (see GitHub)"
+        "Personal Projects (see GitHub)"
       ]
     }
   ]
