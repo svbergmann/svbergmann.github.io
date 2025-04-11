@@ -1,6 +1,11 @@
 name: Build and Deploy Resume
 
-on: push
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - resume.json
 
 jobs:
   build:
