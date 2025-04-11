@@ -18,7 +18,6 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: ghcr.io/moderncv/debian-texlive-docker:main
-      options: --volume ${{ github.workspace }}:/github/workspace --workdir /github/workspace
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -36,8 +35,8 @@ jobs:
         with:
           name: cv-pdfs
           path: |
-            Lebenslauf_Sven_Bergmann.pdf
-            Curriculum_Vitae_Sven_Bergmann.pdf
+            ./Lebenslauf_Sven_Bergmann.pdf
+            ./Curriculum_Vitae_Sven_Bergmann.pdf
 
   # --- Release Job ---
   # Creates a GitHub Release and attaches the PDFs (only runs on tag pushes)
