@@ -27,13 +27,11 @@ jobs:
       - name: Compile LaTeX document
         run: pdflatex -jobname=${{ matrix.jobname }} "\def\cvlang{${{ matrix.cvlang }}} \input{cv.tex}"
 
-      - name: Upload PDF artifacts
+      - name: Upload PDF artifact
         uses: actions/upload-artifact@v4
         with:
-          name: cv-pdfs
-          path: |
-            Lebenslauf_Sven_Bergmann.pdf
-            Curriculum_Vitae_Sven_Bergmann.pdf
+          name: ${{ matrix.jobname }}
+          path: ${{ matrix.jobname }}.pdf
 
   # --- Release Job ---
   # Creates a GitHub Release and attaches the PDFs (only runs on tag pushes)
@@ -48,17 +46,13 @@ jobs:
       - name: Download PDF artifacts from build job
         uses: actions/download-artifact@v4
         with:
-          name: cv-pdfs
+          name: ${{ matrix.jobname }}
 
-      - name: Create Release and Upload PDFs
+      - name: Create Release and Upload PDF
         uses: softprops/action-gh-release@v2
         with:
-          files: |
-            Lebenslauf_Sven_Bergmann.pdf
-            Curriculum_Vitae_Sven_Bergmann.pdf
-          name: Release ${{ github.ref_name }}
-          body: |
-            CV Release for version ${{ github.ref_name }}
-            Includes German and English CVs.
+          files: ${{ matrix.jobname }}.pdf
+          name: ${{ matrix.jobname }}_${{ github.ref_name }}
+          body: CV Release for version ${{ github.ref_name }}
           draft: false
           prerelease: false
