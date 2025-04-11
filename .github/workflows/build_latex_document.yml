@@ -25,16 +25,16 @@ jobs:
         with:
           scheme: full
           run: pdflatex \
-            --job-name=Lebenslauf_Sven_Bergmann \
-            '\def\cvlang{DE}\input{cv.tex}'
+            '\def\cvlang{DE}\input{cv.tex}' \
+            --job-name=Lebenslauf_Sven_Bergmann
 
       - name: Compile English LaTeX document (EN) as Curriculum_Vitae_Sven_Bergmann.pdf
         uses: xu-cheng/texlive-action@v2
         with:
           scheme: full
           run: pdflatex \
-            --job-name=Curriculum_Vitae_Sven_Bergmann \
-            '\def\cvlang{EN}\input{cv.tex}'
+            '\def\cvlang{EN}\input{cv.tex}' \
+            --job-name=Curriculum_Vitae_Sven_Bergmann
 
       - name: Upload PDF artifacts
         uses: actions/upload-artifact@v4
