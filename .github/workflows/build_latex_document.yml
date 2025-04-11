@@ -3,41 +3,29 @@ on:
   push:
     branches:
       - master
-  # Allows to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# Define default permissions for all jobs in the workflow
-permissions:
-  contents: read # Needed for checkout in the build job
-
 jobs:
-  # --- Build Job ---
-  # Compiles both versions of the CV with correct output names and uploads them as artifacts
   build_latex:
     name: Build PDF CVs
     runs-on: ubuntu-latest
     container:
-      image: ghcr.io/moderncv/debian-texlive-docker:main
+      image: blang/latex:latest
+
+    strategy:
+      matrix:
+        include:
+          - cvlang: "DE"
+            jobname: "Lebenslauf_Sven_Bergmann"
+          - cvlang: "EN"
+            jobname: "Curriculum_Vitae_Sven_Bergmann"
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Compile German LaTeX document (DE) as Lebenslauf_Sven_Bergmann.pdf
-        run: pdflatex \
-          -pdf \
-          -interaction=nonstopmode \
-          --shell-escape \
-          --job-name=Lebenslauf_Sven_Bergmann \
-          '\def\cvlang{DE}\input{cv.tex}'
-
-      - name: Compile English LaTeX document (EN) as Curriculum_Vitae_Sven_Bergmann.pdf
-        run: pdflatex \
-          -pdf \
-          -interaction=nonstopmode \
-          --shell-escape \
-          --job-name=Curriculum_Vitae_Sven_Bergmann \
-          '\def\cvlang{EN}\input{cv.tex}'
-
+      - name: Compile LaTeX document
+        run: pdflatex "\def\cvlang{${{ matrix.cvlang }}} \input{cv.tex}" --job-name=${{ matrix.jobname }}
 
       - name: Upload PDF artifacts
         uses: actions/upload-artifact@v4
