@@ -18,6 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: ghcr.io/moderncv/debian-texlive-docker:main
+      options: --volume ${{ github.workspace }}:/github/workspace --workdir /github/workspace
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
