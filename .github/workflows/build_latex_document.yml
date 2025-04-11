@@ -24,6 +24,7 @@ jobs:
 
       - name: Compile German LaTeX document (DE) as Lebenslauf_Sven_Bergmann.pdf
         run: pdflatex \
+          -pdf \
           -interaction=nonstopmode \
           --shell-escape \
           --job-name=Lebenslauf_Sven_Bergmann \
@@ -31,6 +32,7 @@ jobs:
 
       - name: Compile English LaTeX document (EN) as Curriculum_Vitae_Sven_Bergmann.pdf
         run: pdflatex \
+          -pdf \
           -interaction=nonstopmode \
           --shell-escape \
           --job-name=Curriculum_Vitae_Sven_Bergmann \
