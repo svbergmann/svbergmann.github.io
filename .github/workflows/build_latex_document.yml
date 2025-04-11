@@ -23,10 +23,12 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Compile German LaTeX document (DE) as Lebenslauf_Sven_Bergmann.pdf
-        run: pdflatex '\def\cvlang{DE}\input{cv.tex}' jobname=Lebenslauf_Sven_Bergmann
+        run: pdflatex '\def\cvlang{DE}\input{cv.tex}' \
+          job-name=Lebenslauf_Sven_Bergmann
 
       - name: Compile English LaTeX document (EN) as Curriculum_Vitae_Sven_Bergmann.pdf
-        run: pdflatex '\def\cvlang{EN}\input{cv.tex}' jobname=Curriculum_Vitae_Sven_Bergmann
+        run: pdflatex '\def\cvlang{EN}\input{cv.tex}' \
+          job-name=Curriculum_Vitae_Sven_Bergmann
 
       - name: Upload PDF artifacts
         uses: actions/upload-artifact@v4
