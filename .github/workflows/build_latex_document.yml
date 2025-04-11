@@ -16,25 +16,26 @@ jobs:
   build_latex:
     name: Build PDF CVs
     runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/moderncv/debian-texlive-docker:main
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Compile German LaTeX document (DE) as Lebenslauf_Sven_Bergmann.pdf
-        uses: xu-cheng/texlive-action@v2
-        with:
-          scheme: full
-          run: pdflatex \
-            '\def\cvlang{DE}\input{cv.tex}' \
-            --job-name=Lebenslauf_Sven_Bergmann
+        run: pdflatex \
+          -interaction=nonstopmode \
+          --shell-escape \
+          --job-name=Lebenslauf_Sven_Bergmann \
+          '\def\cvlang{DE}\input{cv.tex}'
 
       - name: Compile English LaTeX document (EN) as Curriculum_Vitae_Sven_Bergmann.pdf
-        uses: xu-cheng/texlive-action@v2
-        with:
-          scheme: full
-          run: pdflatex \
-            '\def\cvlang{EN}\input{cv.tex}' \
-            --job-name=Curriculum_Vitae_Sven_Bergmann
+        run: pdflatex \
+          -interaction=nonstopmode \
+          --shell-escape \
+          --job-name=Curriculum_Vitae_Sven_Bergmann \
+          '\def\cvlang{EN}\input{cv.tex}'
+
 
       - name: Upload PDF artifacts
         uses: actions/upload-artifact@v4
