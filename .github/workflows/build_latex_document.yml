@@ -10,7 +10,7 @@ jobs:
     name: Build PDF CVs
     runs-on: ubuntu-latest
     container:
-      image: blang/latex:latest
+      image: ghcr.io/moderncv/debian-texlive-docker:main
 
     strategy:
       matrix:
