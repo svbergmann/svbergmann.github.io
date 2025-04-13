@@ -3,6 +3,8 @@ on:
   push:
     branches:
       - master
+  tags:
+    - "*"
   workflow_dispatch:
 
 jobs:
@@ -23,6 +25,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Compile LaTeX document
         run: pdflatex -jobname=${{ matrix.jobname }} "\def\cvlang{${{ matrix.cvlang }}} \input{cv.tex}"
@@ -42,7 +46,17 @@ jobs:
     if: github.ref_type == 'tag'
     permissions:
       contents: write
+    strategy:
+      matrix:
+        include:
+          - jobname: "Lebenslauf_Sven_Bergmann"
+          - jobname: "Curriculum_Vitae_Sven_Bergmann"
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
       - name: Download PDF artifacts from build job
         uses: actions/download-artifact@v4
         with:
