@@ -1,67 +1,74 @@
 \documentclass{moderncv}
 
-% Set theme to classic and blue headings
-\moderncvtheme[blue]{classic}
+% ------- THEME -------
+\moderncvtheme[blue]{classic} % Or 'casual', 'oldstyle', 'banking'
 
-% Rescale
+% ------- PAGE GEOMETRY -------
 \usepackage[scale=0.8]{geometry}
-\recomputelengths
+\recomputelengths % Required after geometry changes
 
+% ------- LANGUAGE & TRANSLATION SETUP -------
 % Required packages for the translation logic
 \usepackage{ifthen}
 \usepackage{xstring}
 
-% --- LOAD TRANSLATIONS ---
-% Input the file that defines commands based on \cvlanguage
+% Provide a default for \cvlang (will be ignored if defined by command line \def)
+\providecommand{\cvlang}{DE}
+
+% Input the file that defines language-specific commands
+% --- LOAD THIS ONLY ONCE ---
 \input{include/translations}
 
+% --- LANGUAGE SETUP (Part 2: Babel) ---
+% Determine the correct babel option based on \cvlang
 \IfStrEqCase{\cvlang}{%
-    {DE}{\usepackage[ngerman]{babel}}%
-    {EN}{\usepackage[english]{babel}}%
-}[\newcommand{\cvlang}{DE}]
+    {DE}{\providecommand{\babelLanguageOption}{ngerman}}% German language settings
+    {EN}{\providecommand{\babelLanguageOption}{english}}% English language settings
+}[\providecommand{\babelLanguageOption}{ngerman}] % Default fallback: German
 
-% ---
+% Load babel with the determined language option
+\usepackage[\babelLanguageOption]{babel}
 
-\usepackage{graphicx}
-\usepackage{csquotes}
+% ------- OTHER PACKAGES -------
+\usepackage{graphicx} % For photo
+\usepackage{csquotes} % For context-sensitive quotes (\enquote{}), recommended with babel
 
-\input{include/translations}
-
+% ------- PERSONAL DATA -------
 \name{Sven}{Bergmann}
 \title{\titlecv}
 \born{20.09.1995}
 \address{Morillenhang 59}{52074 Aachen}{\germany}
-\phone[mobile]{0049 177 7321 896}
+\phone[mobile]{+49~177~7321~896}
 \email{sbergmann1995@gmail.com}
 \social[linkedin]{svbergmann}
 \social[github]{svbergmann}
 \photo[80pt][0.9pt]{include/images/Bewerbungsfoto_compressed.jpg}
-%
+
+% ------- DOCUMENT START -------
 \begin{document}
-%
+
     \maketitle
-%
+
+% ------- LAYOUT ADJUSTMENTS -------
+% Adjust widths for the 'classic' theme's side column and main column
     \setlength{\hintscolumnwidth}{0.2\textwidth}
-    \setlength{\maincolumnwidth}{0.78\textwidth}
-%
+    \setlength{\maincolumnwidth}{0.78\textwidth} % Note: 0.2 + 0.78 = 0.98 -> leaves 2% gap (often intended)
+
+% ------- CV SECTIONS (Input from separate files) -------
     \input{include/career}
-%
     \input{include/education}
-%
     \input{include/internships}
-%
     \input{include/sidejobs}
-%
     \input{include/languages}
-%
     \input{include/hobbies}
-%
-    \pagebreak
-%
+
+    \clearpage % Prefer \clearpage over \pagebreak for better float handling if needed
+
     \input{include/skills}
-%
-    \pagebreak
-%
+
+    \clearpage % Prefer \clearpage over \pagebreak
+
     \input{include/appendix}
-%
+
+% ------- DOCUMENT END -------
 \end{document}
